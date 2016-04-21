@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="accessibility a11y audio graph tones" />
+  <meta name="description" content="hertz: Listen to graphs" />
+  <title>hertz : Listen to graphs</title>
+  <style type="text/css">
+    html,
+    body,
+    div,
+    h1,
+    p {
+      border: 0;
+      font-family: inherit;
+      font-size: 100%;
+      font-style: inherit;
+      font-weight: inherit;
+      margin: 0;
+      outline: 0;
+      padding: 0;
+      vertical-align: baseline;
+    }
+    :focus {
+      outline: #000 dotted thin;
+    }
+    body {
+      background: #FFF;
+      color: #000;
+      font-family: helvetica;
+      line-height: 1.3;
+    }
+    p {
+      margin: .5em 0;
+    }
+    .wrapper {
+      margin: 1em auto;
+      max-width: 1280px;
+      min-width: 640px;
+      width: 80%;
+    }
+    #hd h1 {
+      font-size: 2em;
+      text-shadow: 3px 3px 5px rgba(17,17,17,.1);
+    }
+    #hd {
+      margin-bottom: 3em;
+    }
+    #bd svg {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="hd">
+      <h1>hertz : Listen to graphs</h1>
+    </div>
+    <div id="bd">
+      <svg viewBox="0 0 85 26" width="600" height="200">
+        <title>Graph of generic number trends (click to listen)</title>
+        <g>
+          <path stroke="#999" stroke-dasharray="1,1" stroke-width="1" d="M2,13L85,13"></path>
+          <circle stroke="#999" cx="2" cy="13" r="1" stroke-width="1" ></circle>
+          <path stroke="black" stroke-width="1" fill="none" d="M7,10.767441860465116L15.11111111111111,14.395348837209301L23.22222222222222,4.906976744186046L31.333333333333332,13.223255813953488L39.44444444444444,1L47.55555555555556,6.358139534883721L55.666666666666664,18.972093023255816L63.77777777777778,12.888372093023257L71.88888888888889,8.534883720930232L80,9.093023255813954"></path>
+        </g>
+      </svg>
+      <p>
+        The graph above has no axis - it's simply a quick reference so a user can determine general trends.  Although this is helpful, the alt text is difficult to effectively and concisely convey the same meaning.  Click the above graph to hear the charted points for those that may have visual impairments.
+      </p>
+    </div>
+  </div>
+  <script type="text/javascript" src="./hertz.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var image = document.getElementsByTagName('svg')[0],
+          addEvent = function(elm, event, action) {
+            if (elm.addEventListener) {
+              elm.addEventListener(event, action, false);
+            }
+
+            else if (elm.attachEvent) {
+              elm.attachEvent('on' + event, action);
+            }
+
+            else {
+              elm['on' + event] = action;
+            }
+          };
+
+      addEvent(image, 'click', function() {
+        hertz([2, -1, 10, 0, 15, 0, -5, 0, 3, 2]);
+      });
+    }());
+  </script>
+</body>
+</html>

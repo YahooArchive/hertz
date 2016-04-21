@@ -1,0 +1,12 @@
+{
+  "name": "hertz-tone-generator",
+  "description": "Accepts an array of numeric values. For each value, a representative audible tone is generated, allowing those users with vision impairments to get the 'at a glance' trends that the data represents.",
+  "version": "0.0.1",
+  "author": "Brian J.",
+  "contributors": [
+    "Cary Stanley"
+  ],
+  "license": "MIT",
+  "main": "hertz.js",
+  "keywords": ["accessibility", "a11y", "audio", "graph", "tones"]
+}
