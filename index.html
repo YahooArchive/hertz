@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+  <meta http-equiv="content-language" content="en" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="keywords" content="accessibility a11y audio graph tones" />
-  <meta name="description" content="hertz: Listen to graphs" />
+  <meta name="description" content="hertz : Listen to graphs" />
   <title>hertz : Listen to graphs</title>
   <style type="text/css">
     html,
@@ -53,6 +53,7 @@
   </style>
 </head>
 <body>
+  <a href="https://github.com/yahoo/hertz" target="_blank"><img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" style="position: absolute; top: 0; right: 0; border: 0;"></a>
   <div class="wrapper">
     <div id="hd">
       <h1>hertz : Listen to graphs</h1>
@@ -63,7 +64,7 @@
         <g>
           <path stroke="#999" stroke-dasharray="1,1" stroke-width="1" d="M2,13L85,13"></path>
           <circle stroke="#999" cx="2" cy="13" r="1" stroke-width="1" ></circle>
-          <path stroke="black" stroke-width="1" fill="none" d="M7,10.767441860465116L15.11111111111111,14.395348837209301L23.22222222222222,4.906976744186046L31.333333333333332,13.223255813953488L39.44444444444444,1L47.55555555555556,6.358139534883721L55.666666666666664,18.972093023255816L63.77777777777778,12.888372093023257L71.88888888888889,8.534883720930232L80,9.093023255813954"></path>
+          <path stroke="black" stroke-width="1" fill="none" d="M7,10L15,14L23,4L31,13L39,1L47,6L55,18L63,12L71,8L80,9"></path>
         </g>
       </svg>
       <p>
@@ -74,7 +75,7 @@
   <script type="text/javascript" src="./hertz.js"></script>
   <script type="text/javascript">
     (function() {
-      var image = document.getElementsByTagName('svg')[0],
+      var graph = document.getElementsByTagName('svg')[0],
           addEvent = function(elm, event, action) {
             if (elm.addEventListener) {
               elm.addEventListener(event, action, false);
@@ -89,7 +90,7 @@
             }
           };
 
-      addEvent(image, 'click', function() {
+      addEvent(graph, 'click', function() {
         hertz([2, -1, 10, 0, 15, 0, -5, 0, 3, 2]);
       });
     }());

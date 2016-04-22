@@ -24,7 +24,7 @@
  * @author cary@yahoo-inc.com, johnsonb@yahoo-inc.com
  * @fileoverview Accepts an array of numeric values.  For each value, a
  * representative audible tone is generated, allowing those users with vision
- * impairment to surmise the "at a glance" trends that the data represents.
+ * impairments to get the "at a glance" trends that the data represents.
  */
 (function (exports){
   'use strict';
