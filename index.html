@@ -75,24 +75,11 @@
   <script type="text/javascript" src="./hertz.js"></script>
   <script type="text/javascript">
     (function() {
-      var graph = document.getElementsByTagName('svg')[0],
-          addEvent = function(elm, event, action) {
-            if (elm.addEventListener) {
-              elm.addEventListener(event, action, false);
-            }
+      var graph = document.getElementsByTagName('svg')[0];
 
-            else if (elm.attachEvent) {
-              elm.attachEvent('on' + event, action);
-            }
-
-            else {
-              elm['on' + event] = action;
-            }
-          };
-
-      addEvent(graph, 'click', function() {
+      graph.addEventListener('click', function() {
         hertz([2, -1, 10, 0, 15, 0, -5, 0, 3, 2]);
-      });
+      }, false);
     }());
   </script>
 </body>
