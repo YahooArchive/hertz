@@ -39,10 +39,10 @@
     var min = Math.min.apply(Math, data);
     var ctx;
     var handler;
-    var audioContext = window.AudioContext || window.webkitAudioContext;
+    var AudioContext = window.AudioContext || window.webkitAudioContext;
 
-    if (audioContext) {
-      ctx = new audioContext();
+    if (AudioContext) {
+      ctx = new AudioContext();
 
       handler = setInterval(function() {
         var osc = ctx.createOscillator();
